@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 export const Signup: React.FC = () => {
 
@@ -8,7 +9,7 @@ export const Signup: React.FC = () => {
                 const formData = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries())
                try {
                 console.log(formData)
-                const res = await axios.post('http://localhost:9002/signup', formData)
+                const res = await axios.post('http://localhost:9002/registerUser', formData)
                 console.log(res)
                 
                } catch (err) {
@@ -68,6 +69,10 @@ export const Signup: React.FC = () => {
                 Sign Up
               </button>
             </form>
+            <div className="text-center text-blue-500 py-3 hover:underline w-full mx-auto">
+            <Link to="/" >Signin</Link>
+
+        </div>
           </div>
         </div>
         </div>)

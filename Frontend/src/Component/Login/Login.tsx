@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 export const Login: React.FC = () => {
@@ -60,6 +60,10 @@ export const Login: React.FC = () => {
             Login
           </button>
         </form>
+        <div className="text-center text-blue-500 py-3 hover:underline w-full mx-auto">
+        <Link className=" " to="/Signup" >Signup</Link>
+
+        </div>
       </div>
     </div>
     </div>)

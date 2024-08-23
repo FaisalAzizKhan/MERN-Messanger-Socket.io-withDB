@@ -2,7 +2,7 @@ const express = require("express")
 const route = express()
 const User = require("../model/user")
 const bcrypt = require("bcrypt")
-
+const userController = require('../controllers/user')
 
 
 route.post("/login", async(req, res)=>{

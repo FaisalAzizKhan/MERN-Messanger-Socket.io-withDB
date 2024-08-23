@@ -56,7 +56,7 @@ export const Connection: React.FC = () => {
         }
           // For All User
           const res = await axios.get("http://localhost:9002/getAllUsers")
-          console.log(res.data)
+          console.log(res)
           setAlUsers(res.data)
 
          } catch (error) {

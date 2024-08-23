@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const route = require("./Routes/userRoute");
+const route = require("./Routes/messanger");
+// const route = require("./Routes/user");
 const { createServer } = require("http");
 const setupWebSocket = require("./Websocket/backSocket");
 require('dotenv').config()
@@ -17,7 +18,7 @@ app.use(cors({
 }));
 app.use(route);
 
-const server = createServer(app);
+const server = createServer(app)
 
 // Set up WebSocket server
 setupWebSocket(server);
@@ -34,5 +35,7 @@ try {
 }
 
 server.listen(9002, () => {
-    console.log(`Server is running on port 9002`);
-});
+    console.log(`Server is running on port 9002`)
+   
+    
+})
